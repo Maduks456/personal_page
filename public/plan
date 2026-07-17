@@ -1,0 +1,19 @@
+// Planed functions
+Calender for visual refrece/ todays date
+Task list of projects/ jobs
+projects can be (done, worked on and not started)
+projects have description, status, link to github, title, maybe a picture?
+tags for projects
+Hall of fame (Every project that is done)
+can see all done  working a not started
+two type of accounts one is the main one (my one) and a public one with less  editing
+A page about myself
+contact links github discord so on
+
+// Pages
+Project CRUD (index, create, edit, show files)
+Tag CRUD (index, create, edit, show files)
+About page
+Hall of fame
+login page for me the main person
+welcome page that has the calender
