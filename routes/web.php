@@ -27,6 +27,6 @@ Route::get('/tags', [TagController::class, 'index']);
 Route::get('/tags/create', [TagController::class, 'create'])->middleware('auth');
 Route::post('/tags', [TagController::class, 'store'])->middleware('auth');
 Route::delete('/tags/{tag}/delete', [TagController::class, 'destroy'])->middleware('auth');
-Route::get('/tags/{tag}', [TagController::class, 'show']);
+Route::get('/tags/{tag}', [TagController::class, 'show'])->middleware('auth');
 Route::get('/tags/{tag}/edit', [TagController::class, 'edit'])->middleware('auth');
 Route::put('/tags/{tag}', [TagController::class, 'update'])->middleware('auth');

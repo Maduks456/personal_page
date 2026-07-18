@@ -9,6 +9,6 @@ class Project extends Model
     protected $fillable =['title', 'description', 'status', 'github_link', 'image'];
     public function tags()
     {
-        return $this->hasMany(Tag::class);
+        return $this->belongsToMany(Tag::class);
     }
 }

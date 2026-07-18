@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Project;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -18,7 +19,8 @@ class ProjectController extends Controller
 
     public function create()
     {
-        return view('projects.create');
+        $tags = Tag::all();
+        return view('projects.create', compact('tags'));
     }
 
     public function store(Request $request)
@@ -28,19 +30,25 @@ class ProjectController extends Controller
             'description' => 'required| max:250',
             'status' => 'required|in:not_started,in_progress,done',
             'github_link' => 'nullable|url',
-            'image' => 'nullable|image|max:2048'
+            'image' => 'nullable|image|max:2048',
+            'tags' => 'nullable|array|max:3',
+            'tags.*'=> 'exists:tags,id'
         ]);
         if ($request->hasFile('image')){
             $path =$request->file('image')->store('projects', 'public');
             $validated['image']= $path; 
         }
-        Project::create($validated);
+        $tags = $validated['tags'] ?? [];
+        unset($validated['tags']);
+        $project = Project::create($validated);
+        $project->tags()->sync($tags);
         return redirect('/projects');
     }
 
     public function edit(Project $project)
     {
-        return view('projects.edit', compact("project"));
+        $tags = Tag::all();
+        return view('projects.edit', compact('project', 'tags'));
     }
 
     public function update(Request $request, Project $project)
@@ -50,7 +58,9 @@ class ProjectController extends Controller
             'description' => 'required| max:250',
             'status' => 'required|in:not_started,in_progress,done',
             'github_link' => 'nullable|url',
-            'image' => 'nullable|image|max:2048'
+            'image' => 'nullable|image|max:2048',
+            'tags' => 'nullable|array|max:3',
+            'tags.*'=> 'exists:tags,id'
         ]);
         if ($request->hasFile('image')){
             if($project->image){
@@ -65,6 +75,7 @@ class ProjectController extends Controller
         $project->description = $validated['description'];
         $project->github_link = $validated['github_link'];
         $project->save();
+         $project->tags()->sync($validated['tags'] ?? []);
         return redirect('/projects/'.$project->id);
     }
 

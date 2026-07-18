@@ -20,23 +20,34 @@ class TagController extends Controller
         return view('tags.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $validated = $request->validate([
+            'name' => 'required|max:50'
+        ]);
+        Tag::create($validated);
+        return redirect('/tags');
 
     }
 
-    public function edit()
+    public function edit(Tag $tag)
     {
-        return view('tags.edit');
+        return view('tags.edit', compact('tag'));
     }
 
-    public function update()
+    public function update(Request $request, Tag $tag)
     {
-
+        $validated = $request->validate([
+            'name' => 'required|max:50'
+        ]);
+        $tag->name = $validated['name'];
+        $tag->save();
+        return redirect('/tags/'. $tag->id);
     }
     
-    public function destroy()
+    public function destroy(Tag $tag)
     {
-
+        $tag->delete();
+        return redirect('/tags');
     }
 }

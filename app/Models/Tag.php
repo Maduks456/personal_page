@@ -9,6 +9,6 @@ class Tag extends Model
     protected $fillable =['name'];
     public function projects()
     {
-        return $this->hasMany(Project::class);
+        return $this->belongsToMany(Project::class);
     }
 }

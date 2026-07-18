@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Project;
 use App\Models\User;
+use App\Models\Tag;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -28,5 +29,9 @@ class DatabaseSeeder extends Seeder
             'email'=>'maduks@gmail.com',
             'password'=> '#ilovecats456'
         ]);
+         Tag::create([
+            'name'=> 'horisons'
+        ]);
+    
     }
 }

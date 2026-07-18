@@ -1,5 +1,10 @@
 <x-layout>
     <form action="login" method="POST">
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                {{ $error }}
+            @endforeach
+        @endif
         <label>
             Email:
             <input type="email" name="email" value="{{old('email')}}" required>

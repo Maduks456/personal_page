@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
-            $table->text("description");
+            $table->string("title", 100);
+            $table->text("description", 250);
             $table->enum("status", ['not_started', 'in_progress', 'done'])->defult('not_started');
             $table->string("github_link")->nullable();
             $table->string("image")->nullable();
