@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\BaseController;
+use App\Http\Controllers\SessionController;
 use App\Http\Controllers\TagController;
 
-Route::get('/', [BaseController::class, 'home']);
+Route::get('/', [BaseController::class, 'home'])->name('login');
 Route::get('/about', [BaseController::class, 'about']);
 Route::get('/hall-of-fame', [ProjectController::class, 'HallOfFame']);
 

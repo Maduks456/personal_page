@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("title");
             $table->text("description");
-            $table->enum("status", ['not_started', 'nn_progress', 'done'])->defult('Not_started');
+            $table->enum("status", ['not_started', 'in_progress', 'done'])->defult('not_started');
             $table->string("github_link")->nullable();
             $table->string("image")->nullable();
             $table->timestamps();

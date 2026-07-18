@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Project;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,9 +18,15 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        Project::create([
+            'title' => 'Personal Page',
+            'description' => 'A Webpage that could see my project ideas and already finished projects',
+            'github_link' => 'https://github.com/Maduks456/personal_page',
+        ]);
+        User::create([
+            'name'=> 'Maduks',
+            'email'=>'maduks@gmail.com',
+            'password'=> '#ilovecats456'
         ]);
     }
 }
