@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Models\Project;
 
 class BaseController extends Controller
 {
@@ -15,7 +16,21 @@ class BaseController extends Controller
         $startofmonth = $date->startOfMonth()->isoWeekday() - 1;
         $days = $date->daysInMonth;
         $lable = $date->format('F Y');
-        return view("home", compact('lable','month', 'year', 'startofmonth','days'));
+        $createddays = Project::whereMonth('created_at', $month)
+        ->whereYear('created_at', $year)
+        ->pluck('created_at')
+        ->map(function($days){
+            return $days->day;
+        });
+        $updateddays = Project::whereMonth('updated_at', $month)
+        ->whereYear('updated_at', $year)
+        ->whereColumn('updated_at', '!=', 'created_at')
+        ->pluck('updated_at')
+        ->map(function($days){
+            return $days->day;
+        });
+
+        return view("home", compact('lable','month', 'year', 'startofmonth','days', 'createddays', 'updateddays'));
     }
     public function about()
     {

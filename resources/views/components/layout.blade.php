@@ -7,6 +7,7 @@
         <title>{{$title ?? "CV"}}</title>
     </head>
     <body>
+        <x-navigation></x-navigation>
         {{ $slot }}
     </body>
 </html>

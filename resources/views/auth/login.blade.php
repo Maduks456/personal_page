@@ -1,5 +1,11 @@
 <x-layout>
-    <form action="login" method="POST">
+    <div>
+        <div class="main_title">
+                <h1>Login</h1>     
+        </div>
+        <div class="short_hor-line"></div>
+        <div>
+            <form action="login" method="POST">
         @if ($errors->any())
             @foreach ($errors->all() as $error)
                 {{ $error }}
@@ -15,4 +21,7 @@
         </label>
         <button>Login</button>
     </form>
+        </div>
+    </div>
+    
 </x-layout>
