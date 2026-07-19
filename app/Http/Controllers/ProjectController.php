@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Project;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -89,6 +90,9 @@ class ProjectController extends Controller
     }
     public function HallOfFame()
     {
+        $projects = Project::where('status','done')->get();
+        
 
+        return view('hall-of-fame', compact("projects" ));
     }
 }
