@@ -29,8 +29,14 @@ class DatabaseSeeder extends Seeder
             'email'=>'maduks@gmail.com',
             'password'=> '#ilovecats456'
         ]);
-         Tag::create([
-            'name'=> 'horisons'
+        Tag::create([
+            'name'=> 'Horisons'
+        ]);
+        Tag::create([
+            'name'=> 'Approved'
+        ]);
+        Tag::create([
+            'name'=> 'Rejected'
         ]);
     
     }
