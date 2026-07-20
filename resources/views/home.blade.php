@@ -12,16 +12,16 @@
         <div class="main_box_column">
             <div class="main_box_side">
                 <div class="main_box_side_title">
-                    <h2>Calender</h2> 
+                    <h2>Calendar</h2> 
                 </div>
             </div>
             <div class="main_box_side">
                 <div class="main_box_side_box">
                     <div>
-                        <h3>About The Calender</h3>
+                        <h3>About The Calendar</h3>
                     </div>
                     <div class="left">
-                        <p>In the calender you can see  which days I (Maduks) have created or updated a project info on the database.</p>
+                        <p>In the calendar you can see  which days I (Maduks) have created or updated a project info on the database.</p>
                         <p><b class="green">Green</b> means i have added a new project. </p>
                         <p><b class="yellow">Yellow</b> means i have updated a project info.</p>
                         <p>If its a graidiant than both happened.</p>

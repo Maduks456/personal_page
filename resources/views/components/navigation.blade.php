@@ -12,6 +12,9 @@
                             <a href="/">Home</a>
                         </div>
                         <div>
+                            <a href="/about">About me</a>
+                        </div>
+                        <div>
                             <a href="/projects">Projects</a>
                         </div>
                         <div>
@@ -20,9 +23,10 @@
                         <div>
                             <a href="/hall-of-fame">Hall Of Fame</a>
                         </div>
+                        
                         @guest
                             <div>
-                                <a href="/login" class="hiddens">Login </a>
+                                <a href="/login" class="hidden">Login </a>
                             </div>
                         @endguest
                         @auth
