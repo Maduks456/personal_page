@@ -37,7 +37,7 @@
                                 <a href="/tags/create">Create a Tag</a>
                             </div>
                             <div>
-                                <form action="logout" method="POST">
+                                <form action="/logout" method="POST">
                                     <button>
                                         Logout
                                     </button>
