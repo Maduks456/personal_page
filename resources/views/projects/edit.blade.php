@@ -78,11 +78,11 @@
                             </label>
                         @endforeach
                 </div>
-                <div class="show_box_img">
-                    @if($project->image)
+                @if($project->image)
+                    <div class="show_box_img">
                         <img src="{{ asset('storage/' . $project->image) }}" width="430" height="220" alt="{{ $project->title }}">
-                    @endif
-                </div>
+                    </div>
+                @endif
             </div>    
         </form>
     </div>
