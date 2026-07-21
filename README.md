@@ -51,6 +51,8 @@
 ## Creator account (Just for to see all pages)
 <p>
     Email: maduks@gmail.com
+</p>
+<p>
     Password: #ilovecats456
 </p>
 <p>To login the button is hidden so i have added an image that shows where to click to go to the login page.</p>
