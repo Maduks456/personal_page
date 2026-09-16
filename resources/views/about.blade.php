@@ -17,7 +17,14 @@
                     GitHub: <a href="https://github.com/Maduks456">https://github.com/Maduks456</a>
                 </div>
             </div>
-
+            <div class="about_box">
+                <div class="big_text">
+                    Hello!
+                </div>
+                <div class="main_text">
+                    Hello, My name is Madars Eduards Dāvis. Im 18 years old. I havent been programming a long time, the first time I work any programming langueges was in the 9th grade about HTML and CSS. Those lesons where the funnest and coolest things I had done and see a website that I made with my own hands was so amaizing. 
+                </div>
+            </div>
         </div>
     </div>
     
