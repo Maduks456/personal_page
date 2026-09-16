@@ -36,9 +36,9 @@
                     Contacts:
                 </div>
                 <div class="main_text">
-                    <p><style></style>Gmail: <a href="mailto:ipa24.m.davis@vtdt.edu.lv">ipa24.m.davis@vtdt.edu.lv</a></p><br>
-                    GitHub: <a href="https://github.com/Maduks456">https://github.com/Maduks456</a><br>
-                    Discord: @maduks456
+                    <p>Gmail: <a href="mailto:ipa24.m.davis@vtdt.edu.lv">ipa24.m.davis@vtdt.edu.lv</a></p><br>
+                    <p>GitHub: <a href="https://github.com/Maduks456">https://github.com/Maduks456</a></p><br>
+                    <p>Discord: @maduks456</p>
                 </div>
             </div>
         </div>

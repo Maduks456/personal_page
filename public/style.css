@@ -446,10 +446,13 @@ background: linear-gradient(97deg, rgba(55, 145, 55, 1) 0%, rgba(87, 199, 133, 1
     height: 200px;
 }
 .big_text{
+    width: 100px;
+    height: 80px;
     font-size: 60px;
 }
 .main_text{
-    
+    width: 300px;
+    height: 180px;
     word-spacing: 5px;
     
 }
