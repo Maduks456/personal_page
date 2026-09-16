@@ -14,7 +14,7 @@
                 </div>
                 <div class="main_text">
                     <p>
-                        Hello, My name is Madars Eduards Dāvis. Im 18 years old.<br> I havent been programming a long time but the first time I work any programming langueges was <br>in the 9th grade about HTML and CSS.<br> Those lesons where the funnest and coolest things I had done <br>and see a website that I made with my own hands was so amaizing. <br>I feel like my passion about programming came from those lesons and art.  
+                        Hello, My name is Madars Eduards Dāvis. Im 18 years old.<br> I havent been programming a long time but the first time I work <br>any programming langueges was in the 9th grade about HTML and CSS.<br> Those lesons where the funnest and coolest things I had done <br>and see a website that I made with my own hands was so amaizing. <br>I feel like my passion about programming came from those lesons and art.  
                     </p>
                 </div>
             </div>
