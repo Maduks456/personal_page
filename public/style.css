@@ -437,6 +437,7 @@ background: linear-gradient(97deg, rgba(55, 145, 55, 1) 0%, rgba(87, 199, 133, 1
     margin: 10px;
 }
 .about_box{
+    padding: 10px;
     display: flex;
     gap: 10px;
     justify-content: space-between ;
@@ -447,12 +448,9 @@ background: linear-gradient(97deg, rgba(55, 145, 55, 1) 0%, rgba(87, 199, 133, 1
     height: 200px;
 }
 .big_text{
-    height: 80px;
     font-size: 60px;
 }
 .main_text{
-    
-    height: 180px;
     word-spacing: 5px;
     
 }
