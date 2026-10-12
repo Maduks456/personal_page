@@ -9,7 +9,7 @@ class TagController extends Controller
     public function index(Request $request){
         $search = $request->input('search_tag');
         $tags = Tag::query()
-        ->when($search, fn($query, $search) =>
+        ->when($search, fn ($query, $search) =>
             $query->where('name','like',"%{$search}%")
         )
         ->latest()
