@@ -26,12 +26,12 @@
                 @forelse($tags as $tag)
                     <div class="tag_box">
                             <div>
-                                    @auth
-                                        <a href="/tags/{{$tag->id}}">{{$tag->name}}</a>
-                                    @endauth
-                                    @guest
-                                        {{$tag->name}}
-                                    @endguest
+                                @auth
+                                    <a href="/tags/{{$tag->id}}">{{$tag->name}}</a>
+                                @endauth
+                                @guest
+                                    {{$tag->name}}
+                                @endguest
                             </div>
                     </div>
                 @empty
