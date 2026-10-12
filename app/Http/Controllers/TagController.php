@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 class TagController extends Controller
 {
     public function index(Request $request){
-        $search = $request->input('search_tag');
+        $search = $request->input('search_tags');
         if(isset($search)){
-            $tags = Tag::where('name','like','%{$search}%')->latest()->get();
+            $tags = Tag::where('name','like','%{$search}%')->get();
         }else{
-            $tags = Tag::all()->latest();
+            $tags = Tag::all();
         }
         return view('tags.index', compact("tags"));
     }
