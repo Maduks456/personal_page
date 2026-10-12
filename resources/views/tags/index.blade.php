@@ -23,7 +23,7 @@
             </div>
         <div class="main_box_row">
             
-                @foreach($tags as $tag)
+                @forelse($tags as $tag)
                     <div class="tag_box">
                             <div>
                                     @auth
@@ -42,7 +42,7 @@
                             <p>Sorry but there arent any tags created for now</p>
                         @endif
                     </div>
-                @endforeach
+                @endforelse
         </div>
     </div>
     
