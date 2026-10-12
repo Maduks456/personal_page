@@ -12,19 +12,28 @@
                 <div class="donthave">
                     <p>Sorry but there arent any tags created for now</p>
                 </div>
-            @endif
-            @foreach($tags as $tag)
-                <div class="tag_box">
-                        <div>
-                                @auth
-                                    <a href="/tags/{{$tag->id}}">{{$tag->name}}</a>
-                                @endauth
-                                @guest
-                                    {{$tag->name}}
-                                @endguest
-                        </div>
+            @else
+                <div>
+                    <form action="/tags" method="GET">
+                        <input type="text"
+                        name="search_tag"
+                        placeholder="Search tags">
+                        <Button type="submit">Search</Button>
+                    </form>
                 </div>
-            @endforeach
+                @foreach($tags as $tag)
+                    <div class="tag_box">
+                            <div>
+                                    @auth
+                                        <a href="/tags/{{$tag->id}}">{{$tag->name}}</a>
+                                    @endauth
+                                    @guest
+                                        {{$tag->name}}
+                                    @endguest
+                            </div>
+                    </div>
+                @endforeach
+            @endif
         </div>
     </div>
     
