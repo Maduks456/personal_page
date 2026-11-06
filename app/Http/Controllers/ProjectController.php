@@ -52,33 +52,7 @@ class ProjectController extends Controller
         return view('projects.edit', compact('project', 'tags'));
     }
 
-    public function update(Request $request, Project $project)
-    {
-        $validated = $request->validate([
-            'title' => 'required|max:100',
-            'description' => 'required| max:250',
-            'status' => 'required|in:not_started,in_progress,done',
-            'github_link' => 'nullable|url',
-            'image' => 'nullable|image|max:2048',
-            'tags' => 'nullable|array|max:3',
-            'tags.*'=> 'exists:tags,id'
-        ]);
-        if ($request->hasFile('image')){
-            if($project->image){
-                Storage::disk('public')->delete($project->image);
-            }
-            $path =$request->file('image')->store('projects', 'public');
-            $project->image = $path; 
-
-        }
-        $project->title = $validated['title'];
-        $project->status = $validated['status'];
-        $project->description = $validated['description'];
-        $project->github_link = $validated['github_link'];
-        $project->save();
-         $project->tags()->sync($validated['tags'] ?? []);
-        return redirect('/projects/'.$project->id);
-    }
+     
 
     public function destroy(Project $project)
     {
